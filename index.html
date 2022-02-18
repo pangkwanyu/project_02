@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/weather.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/weather.js"></script>
+</head>
+<body>
+    <div class="myweather">
+
+        <div class="toubu">
+            <p>我的天气</p>
+        </div>
+
+        <div class="ipt">
+            <input type="text" value="广州" id="ipt">
+        </div>
+
+        <div class="jintian">
+            <p class="p1">广州</p>
+            <p class="p2">16日星期三</p>
+        </div>
+
+        <div class="riqi">
+            
+        </div>
+        <div class="tianqi">
+        </div>
+    </div>
+
+    <script type="text/html" id="weather">
+        {{each}}
+        <p id={{"d"+$index}}>{{$value.day}}日</p>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tinkong">
+        {{each}}
+        
+        <div class="oneday">
+            <p class="tianqi-1">{{$value.type}}</p>
+            <p class="tianqi-2">{{$value.high[1]}};</p>
+            <p class="tianqi-3">{{$value.low[1]}}</p>
+            <p class="tianqi-4">{{$value.fengxiang}}</p>
+            <p class="tianqi-5">{{$value.fengli}}</p>
+        </div>
+        {{/each}}
+    </script>
+</body>
+</html>
