@@ -1,0 +1,5 @@
+# 忽略demo.html 这个文件
+demo.html
+
+# 忽略test目录下所有的文件
+test/
